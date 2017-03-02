@@ -1,0 +1,39 @@
+/* float contrastVal = val;
+             Bitmap rgbImageMap = (Bitmap)cc.rgbImage.Clone();
+             contrastVal = (50f + contrastVal) / 50f;
+             contrastVal *= contrastVal;
+             Color valuePixel;
+             for (int i = tmpA; i < tmpWidth; ++i)
+             {
+                 for (int j = tmpB; j < tmpHeight; ++j)
+                 {
+                     valuePixel= rgbImageMap.GetPixel(i, j);
+                     float pR = valuePixel.R / 255f;
+                     pR -= 0.5f;
+                     pR *= contrastVal;
+                     pR += 0.5f;
+                     pR *= 255;
+                     if (pR < 0) pR = 0;
+                     if (pR > 255) pR = 255;
+
+                     float pG = valuePixel.G / 255f;
+                     pG -= 0.5f;
+                     pG *= contrastVal;
+                     pG += 0.5f;
+                     pG *= 255;
+                     if (pG < 0) pG = 0;
+                     if (pG > 255) pG = 255;
+
+                     float pB = valuePixel.B / 255f;
+                     pB -= 0.5f;
+                     pB *= contrastVal;
+                     pB += 0.5f;
+                     pB *= 255;
+                     if (pB < 0) pB = 0;
+                     if (pB > 255) pB = 255;
+
+                     rgbImageMap.SetPixel(i, j, Color.FromArgb((byte)pR, (byte)pG, (byte)pB));
+                 }
+             }
+             cc.rgbImage = (Bitmap)rgbImageMap.Clone();
+             pictureBox1.Image = cc.rgbImage; */
